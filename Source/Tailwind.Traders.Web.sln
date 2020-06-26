@@ -5,6 +5,25 @@ VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tailwind.Traders.Web", "Tailwind.Traders.Web\Tailwind.Traders.Web.csproj", "{6148DD0E-9240-44E0-A539-99AEA88A44BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terraform", "Terraform", "{351F4213-FB89-40F2-A6E7-4E655D4D8C74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureResources", "AzureResources", "{547B63FA-3CEF-4884-BBBD-385F309E9455}"
+	ProjectSection(SolutionItems) = preProject
+		..\Terraform\AzureResources\main.tf = ..\Terraform\AzureResources\main.tf
+		..\Terraform\AzureResources\variables.tf = ..\Terraform\AzureResources\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{EF4FE4A2-3300-41D3-9671-50B1F5BBB14D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{6C8095D5-CE5C-40BC-9EBE-638E2AB50AEB}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\aks.yaml = ..\.github\workflows\aks.yaml
+		..\.github\workflows\container_appservice.yaml = ..\.github\workflows\container_appservice.yaml
+		..\.github\workflows\pr_build_check.yaml = ..\.github\workflows\pr_build_check.yaml
+		..\.github\workflows\readme.md = ..\.github\workflows\readme.md
+		..\.github\workflows\regular_appservice.yaml = ..\.github\workflows\regular_appservice.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +37,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{547B63FA-3CEF-4884-BBBD-385F309E9455} = {351F4213-FB89-40F2-A6E7-4E655D4D8C74}
+		{6C8095D5-CE5C-40BC-9EBE-638E2AB50AEB} = {EF4FE4A2-3300-41D3-9671-50B1F5BBB14D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7C1827B-E832-407C-A48F-AA7988DD4308}
